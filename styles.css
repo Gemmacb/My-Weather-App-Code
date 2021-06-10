@@ -14,7 +14,10 @@ footer {
 #city-text {
   opacity: 75%;
 }
-
+#temp,
+#celsius {
+  font-size: 24px;
+}
 .city {
   padding: 20px;
   font-size: 40px;
