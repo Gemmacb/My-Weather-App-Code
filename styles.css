@@ -9,6 +9,8 @@ h2 {
 footer {
   padding-top: 20px;
   color: #ffffff;
+  display: block;
+  margin: auto 0;
 }
 #city-text {
   opacity: 75%;
@@ -45,10 +47,11 @@ footer {
 }
 .container {
   margin: 0 auto;
+  padding: 0;
   position: relative;
   width: 100%;
   padding: 35px;
-  height: 75%;
+  height: 100vh;
 }
 
 .title {
@@ -75,7 +78,10 @@ footer {
   background-image: url("src/background-mountain-image.jpg");
   background-position: center center;
   background-size: 100% 100%;
-  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #cfc7f8;
 }
 
 .card {
