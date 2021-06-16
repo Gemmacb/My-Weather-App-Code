@@ -18,6 +18,11 @@ footer {
 #celsius {
   font-size: 24px;
 }
+
+.forecast-day-1 {
+  color: black;
+}
+
 .city {
   padding: 20px;
   font-size: 40px;
