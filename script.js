@@ -63,6 +63,38 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+//display weather forecast for new few days
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="row">   
+                <div class="col">
+                    <div class=forecast-day-1>${day}
+                    </div>
+                </div>
+                <div class="col">10°C & Cloudy 
+                    <span class="cloudy">☁️</i>
+                    </span>
+                </div>
+            </div>
+        `;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //display the city, temperature and weather of the city entered
 function displayWeatherCondition(response) {
   document.querySelector("#user-city").innerHTML = response.data.name;
@@ -93,6 +125,9 @@ cityForm.addEventListener("submit", handleSubmit);
 
 //default city search
 searchCity("New York");
+
+//call weather forecast for days
+displayForecast();
 
 //current location button
 let currentLocationButton = document.querySelector("#location-button");
